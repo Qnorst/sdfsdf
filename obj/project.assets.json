@@ -1871,11 +1871,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Qnorst\\Documents\\My studies\\My studies\\МДК 06.02 УиФИС\\TaskSearchWPF\\TaskSearchWPF.csproj",
+      "projectUniqueName": "C:\\Users\\Qnorst\\Documents\\My studies\\My studies\\МДК 06.02 УиФИС\\TaskSearchWPF — копия\\TaskSearchWPF.csproj",
       "projectName": "TaskSearchWPF",
-      "projectPath": "C:\\Users\\Qnorst\\Documents\\My studies\\My studies\\МДК 06.02 УиФИС\\TaskSearchWPF\\TaskSearchWPF.csproj",
+      "projectPath": "C:\\Users\\Qnorst\\Documents\\My studies\\My studies\\МДК 06.02 УиФИС\\TaskSearchWPF — копия\\TaskSearchWPF.csproj",
       "packagesPath": "C:\\Users\\Qnorst\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Qnorst\\Documents\\My studies\\My studies\\МДК 06.02 УиФИС\\TaskSearchWPF\\obj\\",
+      "outputPath": "C:\\Users\\Qnorst\\Documents\\My studies\\My studies\\МДК 06.02 УиФИС\\TaskSearchWPF — копия\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -5,32 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskSearchWPF"
         mc:Ignorable="d"
-        Title="FormCreateWindow" Height="450" Width="800">
+        Title="FormCreateWindow" Height="600
+        " Width="800">
     <Grid>
 
-        <TextBlock Text="Расскажите о себе: " FontSize="15" VerticalAlignment="Top" Margin="0,114,0,0"/>
-        <TextBox Name="FormDescriptionBox" Text="" Margin="28,154,28,103"/>
-        <TextBlock Text="Название игры:" FontSize="15"  VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="17" Margin="16,0,0,395" Width="107" RenderTransformOrigin="0.356,-1.451" />
+        <TextBlock Text="Расскажите о себе: " FontSize="15" VerticalAlignment="Top" Margin="10,318,-10,0"/>
+        <TextBox Name="FormDescriptionBox" Text="" Margin="28,350,28,103"/>
+        <TextBlock Text="Название игры:" FontSize="15"  VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="17" Margin="139,0,0,542" Width="107" RenderTransformOrigin="0.356,-1.451" />
 
-        <Button Name="CreateFormBtn" Content="Создать анкету" Click="CreateFormBtn_Click" Height="25" Width="150" Margin="125,366,125,0" VerticalAlignment="Top"/>
-        <ComboBox Name="GameSelect" Margin="293,32,244,382" ItemsSource="{Binding Game}" SelectedItem="{Binding UserForm.GameId}">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding GameName}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <TextBlock FontSize="15"  VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="17" Margin="16,0,0,343" Width="232" RenderTransformOrigin="0.356,-1.451" ><Run Language="ru-ru" Text="Выберите предпочитаемую роль: "/></TextBlock>
-        <ComboBox x:Name="RoleSelect" Margin="293,78,244,336" ItemsSource="{Binding InTeamStatus}" SelectedItem="{Binding UserForm.PreferredInTeamStatusId}">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding InTeamStatusName}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+        <Button Name="CreateFormBtn" Content="Создать анкету" Click="CreateFormBtn_Click" Height="25" Width="150" Margin="325,502,325,0" VerticalAlignment="Top"/>
+        <TextBlock FontSize="15"  VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="17" Margin="486,0,0,542" Width="232" RenderTransformOrigin="0.356,-1.451" ><Run Language="ru-ru" Text="Выберите предпочитаемую роль: "/></TextBlock>
+        <ListBox Name="GameList" Margin="123,63,537,309"/>
+        <ListBox Name="RoleList" Margin="504,56,96,302"/>
     </Grid>
 </Window>

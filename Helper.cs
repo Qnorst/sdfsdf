@@ -11,5 +11,10 @@ namespace TaskSearchWPF
     {
         public static TeamSearchContext db = new TeamSearchContext();
         public static User userSession;
+        public static UserForm userForm;
+        public static User setUser;
+        public static TeamMember teamMember;
+        public static UserForm userForma;
+        public static Tounament tounament;
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zs89EHTAU2ux/aUYoy3qMReoButdJRaiVt4VoqHYZti7x03Cy37fmNPZ61VQewGPy/RPS+bOmD7ElrIW0AHUlQ==",
+  "dgSpecHash": "hQwdppCyXGmI9UiP51jf2lEKe1uDjVXFjKfGlUBQAMQpskVkfhAM5j4GqbDBtLfAG/YtW1ykCUeCmSw3HeGNWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Qnorst\\Documents\\My studies\\My studies\\МДК 06.02 УиФИС\\TaskSearchWPF\\TaskSearchWPF.csproj",
+  "projectFilePath": "C:\\Users\\Qnorst\\Documents\\My studies\\My studies\\МДК 06.02 УиФИС\\TaskSearchWPF — копия\\TaskSearchWPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Qnorst\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Qnorst\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

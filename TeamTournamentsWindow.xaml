@@ -1,0 +1,39 @@
+﻿<Window x:Class="TaskSearchWPF.TeamTournamentsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskSearchWPF"
+        mc:Ignorable="d"
+        Title="TeamTournamentsWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="294*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="294*"/>
+            <ColumnDefinition Width="66*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="302*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="CurrentTournamentsDGrid" Margin="0,3,0,0" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Center" Width="290" Height="300" VerticalAlignment="Top" Grid.Row="1" MouseDoubleClick="CurrentTournamentsDGrid_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название турнира" Binding="{Binding User.UserNick}"  Width="130"  CanUserSort="False"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding InTeamStatus.InTeamStatusName}" Width="160"  CanUserSort="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Name="PastTournamentsDGrid" Margin="0,3,0,0" Grid.RowSpan="2" Grid.Column="3" HorizontalAlignment="Center" Width="290" Height="300" VerticalAlignment="Top" Grid.Row="1" MouseDoubleClick="PastTournamentsDGrid_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название турнира" Binding="{Binding User.UserNick}"  Width="130"  CanUserSort="False"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding InTeamStatus.InTeamStatusName}" Width="160"  CanUserSort="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Grid.Column="1" Content="Текущие турниры" Margin="90,29,90,10"/>
+        <Label Grid.Column="3" Content="Прошедшие турниры" Margin="82,29,82,10"/>
+        <Button Name="CloseWindowBtn" Grid.Column="2" Content="Закрыть" Margin="10,20,10,0" Grid.Row="2" Click="CloseWindowBtn_Click"/>
+    </Grid>
+</Window>

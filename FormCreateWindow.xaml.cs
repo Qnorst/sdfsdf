@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,21 +27,22 @@ namespace TaskSearchWPF
             User currentUser;
             currentUser = Helper.userSession;
             DataContext = currentUser;
+            RoleList.ItemsSource = Helper.db.InTeamStatuses.Select(q => q.InTeamStatusName).ToList();
+            GameList.ItemsSource = Helper.db.Games.Select(q => q.GameName).ToList();
         }
 
         private void CreateFormBtn_Click(object sender, RoutedEventArgs e)
         {
-            string Game = GameSelect.Text;
+
             string FormText = FormDescriptionBox.Text.Trim();
             int UserId = Helper.userSession.UserId;
-            var PreferredInTeamStatus = RoleSelect.Text;
+            var role = RoleList.SelectedIndex;
+            var selest = GameList.SelectedIndex;
 
             UserForm form = new UserForm()
             {
                 UserId = UserId,
                 FormText = FormText,
-                PreferredInTeamStatus = (InTeamStatus)RoleSelect.SelectedItem,
-                GameId = int.Parse(Game)
             };
             Helper.db.UserForms.Add(form);
             Helper.db.SaveChanges();

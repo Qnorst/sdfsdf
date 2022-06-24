@@ -7,24 +7,78 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ChangeInTeamStatusWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditFormWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="FormCreateWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ManageTeamWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MenuWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="NewPlayerRoleChoose.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TakeTournamentInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TeamCreationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TeamMemberInfoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TeamTournamentsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserInfoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ChangeInTeamStatusWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditFormWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="FormCreateWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ManageTeamWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MenuWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="NewPlayerRoleChoose.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="RegistrationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TakeTournamentInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TeamCreationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TeamMemberInfoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TeamTournamentsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserInfoWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

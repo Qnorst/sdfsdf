@@ -7,12 +7,12 @@ namespace TaskSearchWPF.Models
     {
         public TournamentStatus()
         {
-            TounamentTeams = new HashSet<TounamentTeam>();
+            Tounaments = new HashSet<Tounament>();
         }
 
         public int TournamentStatusId { get; set; }
         public string TournamentStatusName { get; set; } = null!;
 
-        public virtual ICollection<TounamentTeam> TounamentTeams { get; set; }
+        public virtual ICollection<Tounament> Tounaments { get; set; }
     }
 }

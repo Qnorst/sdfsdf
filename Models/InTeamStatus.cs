@@ -7,12 +7,12 @@ namespace TaskSearchWPF.Models
     {
         public InTeamStatus()
         {
-            UserForms = new HashSet<UserForm>();
+            TeamMembers = new HashSet<TeamMember>();
         }
 
         public int InTeamStatusId { get; set; }
         public string InTeamStatusName { get; set; } = null!;
 
-        public virtual ICollection<UserForm> UserForms { get; set; }
+        public virtual ICollection<TeamMember> TeamMembers { get; set; }
     }
 }

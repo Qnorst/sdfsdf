@@ -1,0 +1,17 @@
+﻿<Window x:Class="TaskSearchWPF.EditFormWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskSearchWPF"
+        mc:Ignorable="d"
+        Title="EditFormWindow" MaxHeight="450" MaxWidth="400" MinHeight="450" MinWidth="400">
+    <Grid>
+        <TextBlock Text="Редактировать описание анкеты" FontSize="15" VerticalAlignment="Top" Margin="0,56,0,0"/>
+        <TextBox Name="FormTextBox" Text="{Binding FormText}" TextWrapping="Wrap" Margin="28,114,28,194"/>
+
+
+        <Button Name="EditFormBtn" Content="Сохранить" Click="EditFormBtn_Click" Height="25" Width="150" Margin="125,300,125,0" VerticalAlignment="Top"/>
+        <Button x:Name="DeleteFormBtn_Copy" Content="Удалить анкету" Click="DeleteFormBtn_Click" Height="25" Width="150" Margin="125,374,125,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

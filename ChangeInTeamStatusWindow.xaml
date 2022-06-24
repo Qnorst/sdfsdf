@@ -1,0 +1,15 @@
+﻿<Window x:Class="TaskSearchWPF.ChangeInTeamStatusWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskSearchWPF"
+        mc:Ignorable="d"
+        Title="ChangeInTeamStatusWindow" Height="450" Width="300">
+    <Grid>
+        <Button Name="ChangeInTeamStatusBtn" Content="Сменить" Click="ChangeInTeamStatusBtn_Click" HorizontalAlignment="Center" Margin="0,373,0,0" VerticalAlignment="Top"/>
+        <ListBox Name="RoleList" Margin="50,51,50,79"/>
+        <Label Content="Выберете роль" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

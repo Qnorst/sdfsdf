@@ -11,29 +11,55 @@
             <TabItem Header="Профиль">
                 <Grid>
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="83.409"/>
+                        <ColumnDefinition Width="5.611"/>
+                        <ColumnDefinition Width="156.98"/>
+                        <ColumnDefinition Width="52"/>
+                        <ColumnDefinition Width="502"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Профиль" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,39,0,0" Height="20" Width="63"/>
+                    <TextBlock Text="Мои анкеты" FontSize="15"  Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,33,0,0" Height="20" Width="84"/>
+                    <TextBlock Text="Имя:" FontSize="13"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="39,70,0,0" Height="17" Width="28" RenderTransformOrigin="0.214,1.475"/>
+                    <TextBlock Text="Фамилия:" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,112,0,0" Height="17" Width="56"/>
+                    <TextBlock Text="Ник:" FontSize="13"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="37,151,0,0" Height="17" Width="30"/>
+
+
+                    <TextBox Name="UserName" Text="{Binding UserName}" IsReadOnly="True" FontSize="13" Margin="77,64,0,313" Grid.ColumnSpan="3"/>
+                    <TextBox Name="UserSurname" Text="{Binding UserSurname}" FontSize="13" Margin="77,107,0,272" Grid.ColumnSpan="3"/>
+                    <TextBox Name="UserNick" Text="{Binding UserNick}" FontSize="13" Margin="77,151,0,228" Grid.ColumnSpan="3"/>
+                    <DataGrid Name="UserFormsDGrid" ColumnWidth="*" Grid.Column="4" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" CanUserSortColumns="True" MouseDoubleClick="UserFormsDGrid_MouseDoubleClick" Margin="30,55,30,131" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Описание" Width="442" Binding="{Binding FormText}" CanUserSort="False"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Выйти" Name="LogOutBtn" Click="LogOutBtn_Click" HorizontalAlignment="Left" Margin="29,345,0,0" VerticalAlignment="Top" Height="24" Width="82" Grid.Column="2"/>
+                    <Button Grid.Column="4" Name="CreateFormBtn" Click="CreateFormBtn_Click" Content="Создать анкету" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Height="24" Width="144"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Команда">
+                <Grid>
+                    <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="246"/>
                         <ColumnDefinition Width="52"/>
                         <ColumnDefinition Width="502"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="Профиль" FontSize="15"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,39,0,0" Height="20" Width="63"/>
-                    <TextBlock Text="Мои анкеты" FontSize="15"  Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,33,0,0" Height="20" Width="84"/>
-                    <TextBlock Text="Имя:" FontSize="13"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="39,70,0,0" Height="17" Width="28" RenderTransformOrigin="0.214,1.475"/>
-                    <TextBlock Text="Фамилия:" FontSize="13"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="14,112,0,0" Height="17" Width="56"/>
-                    <TextBlock Text="Ник:" FontSize="13"  Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="23,0,0,0" Height="17" Width="39"/>
-                    
+                    <TextBlock Text="Команда" FontSize="15"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,17,0,0" Height="20" Width="63"/>
+                    <TextBlock Text="Состав" FontSize="15"  Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,33,0,0" Height="20" Width="84"/>
+                    <TextBlock Text="Название:" FontSize="13"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,64,0,0" Height="17" Width="65" RenderTransformOrigin="0.214,1.475"/>
+                    <TextBox x:Name="TeamName" IsReadOnly="True" FontSize="13" Margin="51,81,25,296"/>
 
-                    <TextBox Name="UserName" Text="{Binding UserName}" IsReadOnly="True" FontSize="13" Margin="74,64,2,313"/>
-                    <TextBox Name="UserSurname" Text="{Binding UserSurname}" FontSize="13" Margin="77,107,0,272"/>
-                    <TextBox Name="UserNick" Text="{Binding UserNick}" FontSize="13" Margin="77,193,0,186"/>
-                    <DataGrid Name="UserFormsDGrid" ColumnWidth="*" Grid.Column="2" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" CanUserSortColumns="True" Margin="30,55,30,131" >
+                    <DataGrid x:Name="TeamMemsDGrid" ColumnWidth="*" Grid.Column="2" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" CanUserSortColumns="True" MouseDoubleClick="TeamMemsDGrid_MouseDoubleClick" Margin="30,73,70,113" >
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Игра" Width="110" Binding="{Binding Game.GameName}" CanUserSort="False"/>
-                            <DataGridTextColumn Header="Роль" Width="130" Binding="{Binding InTeamStatus.InTeamStatusName}" CanUserSort="False"/>
-                            <DataGridTextColumn Header="Описание" Width="200" Binding="{Binding FormText}" CanUserSort="False"/>
+                            <DataGridTextColumn Header="Ник" Binding="{Binding User.UserNick}"  Width="200"  CanUserSort="False"/>
+                            <DataGridTextColumn Header="Роль" Binding="{Binding InTeamStatus.InTeamStatusName}" Width="200"  CanUserSort="False"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="Выйти" Name="LogOutBtn" Click="LogOutBtn_Click" HorizontalAlignment="Left" Margin="118,345,0,0" VerticalAlignment="Top" Height="24" Width="82"/>
-                    <Button Grid.Column="2" Name="CreateFormBtn" Click="CreateFormBtn_Click" Content="Создать задание" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Height="24" Width="144"/>
+                    <Button x:Name="CreateTeamBtn" Click="CreateTeamBtn_Click" Content="Создать команду" HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top" Height="24" Width="144"/>
+                    <TextBlock FontSize="13"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,110,0,0" Height="17" Width="65" RenderTransformOrigin="0.214,1.475"><Run Language="ru-ru" Text="Капитан"/><Run Text=":"/></TextBlock>
+                    <TextBox x:Name="CaptainName" IsReadOnly="True" FontSize="13" Margin="51,127,25,250"/>
+                    <Button x:Name="LeaveTeamBtn" Content="Покинуть команду" Click="LeaveTeamBtn_Click" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" Width="144" Height="26"/>
+                    <Button x:Name="ManageTeamBtn" Content="Управление командой" Click="ManageTeamBtn_Click" HorizontalAlignment="Center" Margin="0,231,0,0" VerticalAlignment="Top" Width="144" Height="21"/>
+                    <Button x:Name="TournamentInfoBtn" Content="Турниры команды" Click="TournamentInfoBtn_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="144" Height="21"/>
                 </Grid>
             </TabItem>
         </TabControl>

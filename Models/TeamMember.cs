@@ -8,9 +8,8 @@ namespace TaskSearchWPF.Models
         public int UserId { get; set; }
         public int TeamId { get; set; }
         public int InTeamStatusId { get; set; }
-        public int GameId { get; set; }
+        public int TeamMembersId { get; set; }
 
-        public virtual Game Game { get; set; } = null!;
         public virtual InTeamStatus InTeamStatus { get; set; } = null!;
         public virtual Team Team { get; set; } = null!;
         public virtual User User { get; set; } = null!;

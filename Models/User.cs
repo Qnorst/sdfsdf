@@ -7,6 +7,7 @@ namespace TaskSearchWPF.Models
     {
         public User()
         {
+            TeamMembers = new HashSet<TeamMember>();
             UserForms = new HashSet<UserForm>();
         }
 
@@ -16,6 +17,7 @@ namespace TaskSearchWPF.Models
         public string UserSurname { get; set; } = null!;
         public string UserPassword { get; set; } = null!;
 
+        public virtual ICollection<TeamMember> TeamMembers { get; set; }
         public virtual ICollection<UserForm> UserForms { get; set; }
     }
 }
